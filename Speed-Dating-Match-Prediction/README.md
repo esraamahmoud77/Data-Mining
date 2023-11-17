@@ -1,5 +1,3 @@
-# Project Readme:
-
 ## Problem Formulation
 In this assignment, the objective is to predict the outcome of specific speed dating sessions based on the profiles of two people. The goal is to implement a recommendation system to enhance matching in speed dating events. The dataset used is a clean but feature-rich tabular dataset containing information about each dating session. The assignment focuses on a binary classification task, predicting the probability of a dating session leading to a successful match.
 
