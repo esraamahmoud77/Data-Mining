@@ -1,3 +1,7 @@
+# Reddit Fake Post Detection
+
+This project aims to detect fake posts on Reddit using natural language processing (NLP) and machine learning (ML) techniques. Two different implementations have been explored to achieve this goal, each with its unique preprocessing and modeling approaches.
+
 ## Problem Formulation
 In this assignment, the objective is to predict the outcome of specific speed dating sessions based on the profiles of two people. The goal is to implement a recommendation system to enhance matching in speed dating events. The dataset used is a clean but feature-rich tabular dataset containing information about each dating session. The assignment focuses on a binary classification task, predicting the probability of a dating session leading to a successful match.
 
@@ -50,6 +54,35 @@ Designing and selecting a machine learning model that suits the data and underst
 
 6. **Performance Evaluation:**
    - Assess the performance of each model using AUROC.
+
+## Implementation 1
+
+### Text Cleaning
+
+- Remove special characters
+- Remove user handles/mentions
+- Remove hashtags
+- Remove stopwords/punctuation
+- Convert to lowercase
+- Remove multiple spaces
+- Remove numbers
+- Remove emojis
+- Remove non-ASCII characters
+- Remove currency symbols
+- Remove emails/dates
+- Remove HTML tags/URLs
+
+### Noise Scan
+Utilized the `TextFrame` class from the `nt` library to perform a noise scan on the training data.
+
+### Train Preprocessing
+Applied a series of text cleaning steps using the [nfx library](https://pypi.org/project/nfx/), including removing user handles, hashtags, URLs, HTML tags, dates, emails, non-ASCII characters, stopwords, punctuation, special characters, emojis, and numbers. Additionally, the text was converted to lowercase and lemmatized.
+
+### Test Preprocessing
+Performed similar preprocessing steps on the testing data.
+
+### Train-Validation Split
+Split the cleaned training data into training and validation sets for model evaluation.
 
 ## Model Tuning and Documentation:
 
